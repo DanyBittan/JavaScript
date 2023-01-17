@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="./aleatorio.js" type="text/javascript"></script>
+    <script defer src="./cargarAPIs.js" type="text/javascript"></script>
+    <script defer src="./mostrar.js" type="text/javascript"></script>
+    <script defer src="./script.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="./styles.css" />
+    <title>TAREAS 19/05 - SOLUCIÓN</title>
+</head>
+
+<body>
+    <div class="content">
+        <h2>TAREAS 19/05</h2>
+        <div class="grid-container">
+
+            <!-- TITULO -->
+            <div class="grid-item">
+                <div class="title">API web de {JSON} Placeholder</div>
+            </div> <!-- FIN grid-item-->
+            <!-- RESULTADO TITULO -->
+            <div class="grid-item">
+                <div class="title">Soluciones de {JSON} Placeholder</div>
+            </div>
+
+            <!-- ************************************************************** -->
+
+            <!-- EJERCICIO -->
+            <div class="grid-item">
+                <input type='button' id="mostrarPosts" value="Posts" /><br />
+                <input type='button' id="mostrarComments" value="Comments" /><br />
+                <input type='button' id="mostrarAlbums" value="Albums" /><br />
+                <input type='button' id="mostrarPhotos" value="Photos" /><br />
+                <input type='button' id="mostrarTodos" value="Todos" /><br />
+                <input type='button' id="mostrarUsers" value="Users" />
+            </div> <!-- FIN grid-item-->
+            <!-- RESULTADO EJERCICIO -->
+            <div class="grid-item">
+                <p><strong>Datos de la API web</strong></p>
+                <label>
+                    <pre>Resultado: </pre>
+                </label>
+                <p id="resTexto"></p>
+            </div>
+
+            <!-- ************************************************************** -->
+        </div> <!-- FIN grid-container-->
+    </div> <!-- FIN contenedor-->
+</body>
+
+</html>

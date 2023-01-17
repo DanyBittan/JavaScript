@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="./aleatorio.js" type="text/javascript"></script>
+    <script defer src="./cargarAPIs.js" type="text/javascript"></script>
+    <script defer src="./mostrarDatos.js" type="text/javascript"></script>
+    <script defer src="./solicitarTodos.js" type="text/javascript"></script>
+    <script defer src="./solicitarUsers.js" type="text/javascript"></script>
+    <script defer src="./solicitarPosts.js" type="text/javascript"></script>
+    <script defer src="./solicitarPhotos.js" type="text/javascript"></script>
+    <script defer src="./solicitarComments.js" type="text/javascript"></script>
+    <script defer src="./solicitarAlbums.js" type="text/javascript"></script>
+    <script defer src="./script.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="./styles.css" />
+    <title>TAREAS 19/05 - SOLUCIÓN</title>
+</head>
+
+<body>
+    <div class="content">
+        <h2>TAREAS 19/05</h2>
+        <div class="grid-container">
+
+            <!-- TITULO -->
+            <div class="grid-item">
+                <div class="title">API web de {JSON} Placeholder</div>
+            </div> <!-- FIN grid-item-->
+            <!-- RESULTADO TITULO -->
+            <div class="grid-item">
+                <div class="title">Soluciones de {JSON} Placeholder</div>
+            </div>
+
+            <!-- ************************************************************** -->
+
+            <!-- EJERCICIO -->
+            <div class="grid-item">
+                <input type='button' id="solicitarPosts" value="Solicitar Posts" /><br />
+                <input type='button' id="solicitarComments" value="Solicitar Comments" /><br />
+                <input type='button' id="solicitarAlbums" value="Solicitar Albums" /><br />
+                <input type='button' id="solicitarPhotos" value="Solicitar Photos" /><br />
+                <input type='button' id="solicitarTodos" value="Solicitar Todos" /><br />
+                <input type='button' id="solicitarUsers" value="Solicitar Users" />
+            </div> <!-- FIN grid-item-->
+            <!-- RESULTADO EJERCICIO -->
+            <div class="grid-item">
+                <p><strong>Datos de la API web</strong></p>
+                <label>
+                    <pre>Resultado: </pre>
+                </label>
+                <p id="resTexto"></p>
+            </div>
+
+            <!-- ************************************************************** -->
+        </div> <!-- FIN grid-container-->
+    </div> <!-- FIN contenedor-->
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+ul{
+    list-style-type: circle;
+}
+#Pbox{
+    margin: 0 auto;
+    border: solid 1.5px;
+    width: 800px;
+    background: rgba(236, 201, 3, 0.658);
+    border-radius:10px;
+}
+#head{
+    font-size: 1.3em;
+    padding: 8px;
+    text-align: center;
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    background: url(naranjita.jpg) repeat;
+    border-radius:10px;
+}
+#Sbox{
+    padding: 2.5em;
+    font-size: 1.2em;
+}
+li{
+    padding: 0.7em;
+}
+a {
+    color: #429;
+    text-decoration: none;
+  }
+  

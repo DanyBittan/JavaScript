@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script type="text/javascript" defer src="../API/API.js"></script>
+	<script type="text/javascript" defer src="../API/CargarAPI.js"></script>
+	<script type="text/javascript" defer src="script.js"></script>
+	<title>Visor</title>
+</head>
+<body class="bg-purple-200">
+	<div class="h-16 w-auto bg-gray-900">
+		<span class="text-purple-100 mt-6 text-start text-3xl">Daniel Bittan Graells</span>
+	</div>
+	<!-- <div id="texto" class="text-center w-96 h-auto m-52 absolute">
+			<figcaption id="descripcion" class="mt-2 text-sm text-left text-blue-100 drop-shadow-xl shadow-indigo-900/40 text-4xl"><b>Hola</b></figcaption>
+	</div> -->
+	<div id="ContornoPrincipal" class="w-96 h-auto my-16 mx-auto">
+		<img id="imagenMostrada" class="w-96 h-80 shadow-2xl border-solid border-8  border-b-yellow-500 border-t-yellow-300 border-orange-600 rounded-lg hidden">
+	</div>
+	<div id="carruselImg" class="w-full h-fit absolute  bg-gray-900 fixed bottom-0">
+		<div id="grid" class="flex-wrap justify-between grid grid-cols-6 gap-1 m-2"></div>
+	</div>	
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script type="text/javascript" defer src="../API/CargarAPI.js"></script>
+	<script type="text/javascript" defer src="script.js"></script>
+	<title>Visor 2</title>
+</head>
+<body class="bg-purple-200">
+	<div class="h-16 w-auto bg-gray-900">
+		<span class="text-purple-100 mt-6 text-start text-3xl">Daniel Bittan Graells</span>
+	</div>
+	<div id="botones" class="mx-[33.5em] my-24">
+		<button id="pasarIzq" class="pasar w-12 h-96 rounded-lg  absolute"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-15 h-15 text-white bg-black hover:bg-red-500 rounded-full">
+			<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75" />
+		</svg>
+	</button>
+	<button id="pasarDer" class="pasar w-12 h-96 rounded-lg mx-96 absolute"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-15 h-15 text-white m-auto bg-black hover:bg-red-500 rounded-full">
+		<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+	</svg>
+</button>
+</div>
+<div id="ContornoPrincipal" class="w-[350px] h-auto my-28 mx-auto flex">
+	<img id="imagenMostrada" class="h-[340px] w-[336.5px] shadow-2xl border-solid border-8  border-b-yellow-500 border-t-yellow-300 border-orange-600 rounded-lg">
+</div>
+<div id="carruselImg" class="w-full h-fit absolute  bg-gray-900 fixed bottom-0 overflow hidden">
+	<div id="grid" class="flex-wrap justify-between grid grid-cols-6 gap-1 m-2"></div>
+</div>	
+</body>
+</html>

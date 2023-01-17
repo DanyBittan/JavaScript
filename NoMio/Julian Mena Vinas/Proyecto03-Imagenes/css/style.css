@@ -1,0 +1,14 @@
+#background {
+  background-image: url(../img/bg.svg);
+  background-color: black;
+}
+
+
+#actualImage  div {
+  transition: 1s ;
+  transition-timing-function: linear;
+}
+
+#searchBtn > svg {
+  margin: auto;
+}

@@ -1,0 +1,46 @@
+#piedra{
+	display: inline-block;
+	position: absolute;
+	border: solid 2px gray;
+	border-radius: 6px;
+	width: 2.8em;
+	height: 3.4em;
+	background-image: url("https://miro.medium.com/max/1200/1*yHZKuUPofUf39CpZ6frmxw.png");
+	background-size: cover;
+}
+#papel{
+	position: absolute;
+	margin-left: 3.5em;
+	border: solid 2px white;
+	border-radius: 6px;
+	width: 2.8em;
+	height: 3.4em;
+	background-image: url("https://miro.medium.com/max/1200/1*yHZKuUPofUf39CpZ6frmxw.png");
+	background-position-x: 270px;
+	background-size: cover;
+}
+#tijera{
+	margin-left: 7em;
+	border: solid 2px red;
+	border-radius: 6px;
+	width: 2.8em;
+	height: 3.4em;
+	background-image: url("https://miro.medium.com/max/1200/1*yHZKuUPofUf39CpZ6frmxw.png");
+	background-position-x: 215px;
+	background-size: cover;
+}
+img{
+	position: absolute;
+	margin-top: 2em;
+	width: 10em;
+	height: 8em;
+}
+#vs{
+	margin-left: 32%;
+}
+#maquinafoto{
+	margin-left: 63%;
+}
+h3{
+	margin-top: 25%;
+}

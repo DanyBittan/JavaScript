@@ -1,0 +1,26 @@
+Una calculadora sencilla que no esta depurada completamente.
+
+El botón M, almacena el resultado anterior de una operación, se puede restablecer a 0 con el boton (CE)
+(C) Borra lo que hay en pantalla y todos los operandos.
+
+Hay botones que solo necesitan de 1 operando y otros que necesitan de 2
+
+Un operando(log, ln, !, 2^a, cos, sen, tan, √, 1/x)
+
+Realiza las operaciones básicas
+
+con el símbolo (%) el operando pasa a calcular un porcentaje, lo hace de 3 maneras distintas y solo se puede colocar el signo al segundo operando.
+
+1. 100 + 10% = 110 (100 + el 10% de 100)
+2. 100 - 10% = 90 (100 - el 10% de 100)
+3. 100 * 10% = 10 (Obtiene el 10% de 100)
+
++/- Cambia el signo de lo que hay en pantalla.
+
+e y π son dos valores ya establecidos (Queria que se me mostrara el caracter por pantalla pero que tuviese el valor numérico almacenado pero no se me ocurrio una manera)
+
+(Rnd) genera un número aleatorio positivo que tiene como máximo 100000
+
+**Esto es una nota como ideas que tuve pero no pude ejecutar:
+
+Quería que en vez de solo dos operandos se operaran con más números usando un array y tambíen poder hacer varias operaciones a la vez como sumar y a la mitad cambiar a resta y así, me dio muchos problemas y no lo he conseguido (Lo seguire intentando aunque ya no me cuente).

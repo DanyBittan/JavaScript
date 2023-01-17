@@ -1,0 +1,20 @@
+#rojo{
+	color: red;
+	border:  solid 1px darkred;
+	border-radius: 5px;
+}
+#azul{
+	color: blue;
+	border:  solid 1px darkblue;
+	border-radius: 5px;
+}
+#verde{
+	color: green;
+	border:  solid 1px darkgreen;
+	border-radius: 5px;
+}
+#cuadro{
+	border: 1px solid;
+	width: 15em;
+	height: 13em;
+}
