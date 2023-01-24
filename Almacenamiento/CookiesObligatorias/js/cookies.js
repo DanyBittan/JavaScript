@@ -1,14 +1,15 @@
 "use strict"
 
+//Con esta función se suben las cookies y te envian a la otra página
+
 function subirCookies(){
 	document.cookie="color="+color.value;
 	document.cookie="letra="+letra.value;
-	document.cookie="Alineación="+ alineacion.value;
-	document.cookie="Tamaño="+size.value;
-}
-
-function cambioPagina(){
+	document.cookie="Alineacion="+ alineacion.value;
+	document.cookie="Size="+size.value;
 	location.replace("./CookieDos.html");
 }
 
-comprueba.addEventListener("click",cambioPagina);
+//Un click al boton de cargar te envia a la página y sube las cookies.
+
+cargar.addEventListener("click",subirCookies);
