@@ -7,7 +7,6 @@ function subirCookies(){
 	document.cookie="letra="+letra.value;
 	document.cookie="Alineacion="+ alineacion.value;
 	document.cookie="Size="+size.value;
-	location.replace("./CookieDos.html");
 }
 
 //Un click al boton de cargar te envia a la página y sube las cookies.
