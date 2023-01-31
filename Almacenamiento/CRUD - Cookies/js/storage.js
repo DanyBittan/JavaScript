@@ -2,13 +2,25 @@
 
 var opciones=radio.value;
 console.log(opciones);
-//Dar valores a una cookie
+
+
 
 // Funciones de las cookies
+
 function guardarDatos(){
-	const objeto={product:}
+	const prodObj={
+		product: prod.value,
+		marca: brand.value,
+		price: pre.value,
+		estado: state.value
+	};
+	var cookieVal=JSON.stringify(prodObj);
+	var cantCookie=document.cookie.split(";");4
+	var id=cantCookie.length;
+	document.cookie=id+cookieVal+"; path=/;";
 }
 
+console.log(id);
 // ***COOKIES***
 // function guardarDatos(){
 // 	document.cookie=cookieName+"="+prod.value;
