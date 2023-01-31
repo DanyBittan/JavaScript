@@ -15,7 +15,7 @@ function guardarDatos(){
 		estado: state.value
 	};
 	var cookieVal=JSON.stringify(prodObj);
-	var cantCookie=document.cookie.split(";");4
+	var cantCookie=document.cookie.split(";");
 	var id=cantCookie.length;
 	document.cookie=id+cookieVal+"; path=/;";
 }
