@@ -17,10 +17,10 @@ function guardarDatos(){
 	var cookieVal=JSON.stringify(prodObj);
 	var cantCookie=document.cookie.split(";");
 	var id=cantCookie.length;
-	document.cookie=id+cookieVal+"; path=/;";
+	document.cookie=id+"="+cookieVal+"; path=/;";
 }
 
-console.log(id);
+
 // ***COOKIES***
 // function guardarDatos(){
 // 	document.cookie=cookieName+"="+prod.value;
