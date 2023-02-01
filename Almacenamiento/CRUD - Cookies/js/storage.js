@@ -1,10 +1,10 @@
 "use strict"
 
-var opciones=radio.value;
+let opciones=radio.value;
 console.log(opciones);
 
 
-
+let arrayVal=[];
 // Funciones de las cookies
 
 function guardarDatos(){
@@ -14,12 +14,21 @@ function guardarDatos(){
 		price: pre.value,
 		estado: state.value
 	};
-	var cookieVal=JSON.stringify(prodObj);
-	var cantCookie=document.cookie.split(";");
-	var id=cantCookie.length;
-	document.cookie=id+"="+cookieVal+"; path=/;";
+	arrayVal.push(prodObj);
+	let cookieVal=JSON.stringify(arrayVal);
+	document.cookie="data="+cookieVal+"; path=/;";
 }
 
+function getCookie(name) {
+  let nameEQ = name + "=";
+  let ca = document.cookie.split(';');
+  for (let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+  }
+  return null;
+}
 
 // ***COOKIES***
 // function guardarDatos(){
