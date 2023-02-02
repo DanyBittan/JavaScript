@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script type="text/javascript" defer src="js/storage.js"></script>
+    <script type="text/javascript" defer src="js/script.js"></script>
+	<title>Cookies</title>
+</head>
+<body class="bg-purple-200 h-screen">
+	<div class="h-16 w-auto bg-gray-900">
+		<h1 class="text-purple-100 text-start text-3xl p-2.5">Cookies</h1>
+	</div>
+<div class="container max-w-7xl mx-auto mt-8">
+  <h1 class="font-serif text-3xl font-bold underline decoration-gray-400 mb-4">Objetos</h1>
+<div class="relative overflow-x-auto rounded-lg">
+    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                <th scope="col" class="px-6 py-3">
+                    Producto
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Marca
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Precio
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Estado
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Acción
+                </th>
+            </tr>
+        </thead>
+        <tbody id="cuerpo">
+        </tbody>
+    </table>
+</div>
+</div>
+<div id="footer" class="flex w-full h-20 text-center bg-gray-900 fixed bottom-0 justify-center">
+    <div class="flex items-center py-2 ">
+       <span class="text-white text-xl mr-10">Introducir: </span>
+      <input class="bg-gray-800 rounded-sm border-none w-32 text-white mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" id="prod" name="prod" placeholder="Producto">
+      <input class="bg-gray-800 rounded-sm border-none w-32 text-white mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" id="brand" name="brand" placeholder="Marca">
+      <input class="bg-gray-800 rounded-sm border-none w-32 text-white mr-3 py-1 px-2 leading-tight focus:outline-none" type="number" id="pre" name="pre" placeholder="Precio">
+      <select class="bg-gray-800 rounded-sm border-none w-32 text-white mr-3 py-1 px-2 leading-tight focus:outline-none" id="state" name="state" placeholder="Estado">
+          <option value="mal">Mal</option>
+          <option value="bien">Bien</option>
+          <option value="excelente">Excelente</option>
+      </select>
+      <button id="cargar" class="rounded-lg m-auto hover:bg-black bg-green-500 text-white m-2 p-2 w-48"><b>Cargar</b></button>
+    </div>
+</div>	
+</body>
+</html>
