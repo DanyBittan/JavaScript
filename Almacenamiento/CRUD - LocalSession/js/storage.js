@@ -30,8 +30,6 @@ function guardarDatos(){
 	document.cookie="data="+cookieVal+"; path=/;expires="+now.toUTCString();
 }
 
-//Función que obtiene los valores de la cookie recibiendo el nombre.
-
 function getCookie(name) {
   let nameCookie = name + "=";
   let quant = document.cookie.split(';');
@@ -43,6 +41,8 @@ function getCookie(name) {
   return null;
 }
 
+
+
 // Borrar una cookie especificada (solo borra los datos de la primera fila. ## ARREGLAR ##)
 
 function eliminarCookies(e) {
@@ -50,4 +50,27 @@ function eliminarCookies(e) {
 	console.log(e.target.value);
 	let cookieVal=JSON.stringify(arrayVal);
 	document.cookie="data="+cookieVal+"; path=/;expires="+now.toUTCString();
+}
+
+//Función que obtiene los valores de la cookie recibiendo el nombre.
+
+
+//LocalStorage
+
+function createItemLocal(){
+	const prodObj={
+		product: prod.value,
+		marca: brand.value,
+		price: pre.value,
+		estado: state.value
+	};
+	arrayVal.push(prodObj);
+	let localVal=JSON.stringify(arrayVal);
+	localStorage.setItem("data",localVal);
+}
+
+//SessionStorage
+
+function createSession(){
+	
 }
