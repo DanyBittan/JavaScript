@@ -1,18 +1,10 @@
 "use strict"
 
-let openDB=indexedDB.open("productos",1);
+let openDB=indexedDB.open("productos",2);
 let db;
 
-openDB.onerror=function(e){
+openDB.onerror=function(){
 	console.log('Error de indexDB: ${requestDB.errorCode}');
-}
-
-openDB.onupgradeneeded=function(){
-	let db=openDB.result;
-	if(!db.objectStoreNames.contains('producto')){
-		db.createObjectStore("producto",{keypath: "id", autoIncrement: true});
-	}
-	console.log("creada");
 }
 
 openDB.onsuccess=function(e){
@@ -20,16 +12,30 @@ openDB.onsuccess=function(e){
 	console.log("Desplegada");
 }
 
+openDB.onupgradeneeded=function(){
+	db=openDB.result;
+	if(!db.objectStoreNames.contains('producto')){
+		const pdto = db.createObjectStore("producto",{keypath: "id", autoIncrement: true});
+	}
+	console.log("pdto");
+}
+
 function addItem(){
 	let transaction=db.transaction("producto","readwrite");
-	let prod= transaction.objectStore("producto");
+	let pdto= transaction.objectStore("producto");
 	let pr ={
-		product: "Si",
-		marca:"Ford",
-		precio:20.29,
-		estado:"Bien"
+		product: prod.value,
+		marca: brand.value,
+		precio: pre.value,
+		estado:state.value
 	}
-	let requestAdd=prod.add(pr);
-	console.log(transaction);
+	pdto.add(pr);
+	pdto.onsuccess=(e)=>{
+		console.log("Conseguido");
+	}
+}
 
+function readAll(){
+	const trans=db.transaction("producto","readonly");
+	let pdto= trans.objectStore("producto");
 }
