@@ -10,6 +10,7 @@ openDB.onerror=function(){
 openDB.onsuccess=function(e){
 	db=e.target.result;
 	console.log("Desplegada");
+	readAll();
 }
 
 openDB.onupgradeneeded=function(){
@@ -38,4 +39,6 @@ function addItem(){
 function readAll(){
 	const trans=db.transaction("producto","readonly");
 	let pdto= trans.objectStore("producto");
+	let mostrar=pdto.get(1);
+	console.log(mostrar);
 }
