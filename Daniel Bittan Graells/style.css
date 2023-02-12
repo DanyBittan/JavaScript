@@ -1,0 +1,22 @@
+.borrado{
+    padding: 0.5em;
+    border-radius: 10px;
+    color: black;
+    background-color: #b53131;
+    width: 6em;
+    margin: 1em;
+}
+.borrado:hover{
+    background-color: #fa0505;
+}
+
+.update{
+    padding: 0.5em;
+    border-radius: 10px;
+    color: black;
+    background-color: #5962ff;
+    width: 6em;
+}
+.update:hover{
+    background-color: #8389f7;
+}
