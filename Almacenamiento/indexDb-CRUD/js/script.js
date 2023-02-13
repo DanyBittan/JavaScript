@@ -15,7 +15,7 @@ cuerpo.addEventListener("click",function(e){
         let newBrand = prompt("Introduce la marca nueva");
         let newPrice = prompt("Introduce el precio nuevo");
         let newState = prompt("Introduce el estado nuevo");
-        updateData(element.id, newName, newBrand, newPrice, newState);
+        updateData(parseInt(element.id), newName, newBrand, newPrice, newState);
     }
 })
 /**

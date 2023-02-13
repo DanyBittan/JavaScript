@@ -91,9 +91,11 @@ function updateData(uIndex, proChange, braChange, priChange,staChange){
 		pr.precio = priChange;
 		pr.estado = staChange;
 
-		const updateRequest = pdto.update(pr);
+		const updateRequest = pdto.put(pr);
 		updateRequest.onsuccess = () => {
 			console.log("Actualizado los datos");
+			cuerpo.innerHTML="";
+			readAll();
 		}
 	}
 }
