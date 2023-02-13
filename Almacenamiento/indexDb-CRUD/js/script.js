@@ -18,6 +18,5 @@ cuerpo.addEventListener("click",function(e){
         updateData(parseInt(element.id), newName, newBrand, newPrice, newState);
     }
 })
-/**
- * Obtenemos los valores de las cookies y los convertimos en objetos de nuevo, luego recorremos un forEach que crea una fila por cada objeto creado.
- **/
+
+cargaApi.addEventListener("click", addItemApi);
