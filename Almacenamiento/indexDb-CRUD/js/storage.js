@@ -55,7 +55,6 @@ function readAll(){
 			let pri = cursor.value.precio;
 			let sta = cursor.value.estado;
 			let id = cursor.value.id;
-			console.log(id);
 			let div = "<tr class='bg-white border-b dark:bg-gray-800 dark:border-gray-700'><th scope='row' class='px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white'>"+pro+"</th><td class='px-6 py-4'>"+bra+"</td><td class='px-6 py-4'>"+pri+"</td><td class='px-6 py-4'>"+sta+"</td><td><button id='"+id+"' class='borrado'>Borrar<button id='"+id+"' class='update'>Actualizar</td></tr>";
 			cuerpo.innerHTML += div;
 			cursor.continue();
@@ -85,7 +84,6 @@ function updateData(uIndex, proChange, braChange, priChange,staChange){
 	const request = pdto.get(uIndex);
 	request.onsuccess = () => {
 		let pr = request.result;
-		console.log(pr);
 		pr.product = proChange;
 		pr.marca = braChange;
 		pr.precio = priChange;
