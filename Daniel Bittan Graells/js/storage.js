@@ -1,6 +1,6 @@
 "use strict"
 
-let openDB=indexedDB.open("productos",2);
+let openDB=indexedDB.open("usuarios",2);
 let db;
 let i=1;
 
@@ -16,47 +16,54 @@ openDB.onsuccess=function(e){
 
 openDB.onupgradeneeded=function(){
 	db=openDB.result;
-	if(!db.objectStoreNames.contains('producto')){
-		const pdto = db.createObjectStore("producto",{keyPath: "id", autoIncrement: true});
+	if(!db.objectStoreNames.contains('user')){
+		const pdto = db.createObjectStore("user",{keyPath: "id", autoIncrement: true});
 	}
-	console.log("pdto");
+	console.log("user");
 }
 
 //AÑADE LOS DATOS 
 
 function addItem(){
-	let transaction=db.transaction("producto","readwrite");
-	let pdto= transaction.objectStore("producto");
-	let pr ={
-		product: prod.value,
-		marca: brand.value,
-		precio: pre.value,
-		estado:state.value
+	let transaction=db.transaction("user","readwrite");
+	let usuario= transaction.objectStore("user");
+	let usr ={
+		name: nom.value,
+		place: loc.value,
+		email: ema.value,
+		phone: pho.value
 	}
-	let succ=pdto.add(pr);
-	succ.onsuccess=(e)=>{
+	let succ=usuario.add(usr);
+	succ.onsuccess=()=>{
 		console.log("Conseguido");
-		location.reload();
+		cuerpo.innerHTML="";
+		readAll();
 	}
 }
 
+async function addItemApi(){
+	const newUser = await APIData();
+	nom.value = newUser.name.first + " " + newUser.name.last;
+	loc.value = newUser.location.country;
+	ema.value = newUser.email;
+	pho.value = newUser.phone;
+}
 //LEE LOS DATOS 
 
 function readAll(){
-	const trans = db.transaction("producto","readonly");
-	let pdto = trans.objectStore("producto");
+	const trans = db.transaction("user","readonly");
+	let pdto = trans.objectStore("user");
 	let request = pdto.openCursor();
 
 	request.onsuccess = (e) => {
 		let cursor = e.target.result;
 		if(cursor){
-			let pro = cursor.value.product;
-			let bra = cursor.value.marca;
-			let pri = cursor.value.precio;
-			let sta = cursor.value.estado;
+			let nom = cursor.value.name;
+			let pla = cursor.value.place;
+			let ema = cursor.value.email;
+			let pho = cursor.value.phone;
 			let id = cursor.value.id;
-			console.log(id);
-			let div = "<tr class='bg-white border-b dark:bg-gray-800 dark:border-gray-700'><th scope='row' class='px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white'>"+pro+"</th><td class='px-6 py-4'>"+bra+"</td><td class='px-6 py-4'>"+pri+"</td><td class='px-6 py-4'>"+sta+"</td><td><button id='"+id+"' class='borrado'>Borrar<button id='"+id+"' class='update'>Actualizar</td></tr>";
+			let div = "<tr class='bg-white border-b dark:bg-gray-800 dark:border-gray-700'><th scope='row' class='px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white'>"+nom+"</th><td class='px-6 py-4'>"+pla+"</td><td class='px-6 py-4'>"+ema+"</td><td class='px-6 py-4'>"+pho+"</td><td><button id='"+id+"' class='borrado'>Borrar<button id='"+id+"' class='update'>Actualizar</td></tr>";
 			cuerpo.innerHTML += div;
 			cursor.continue();
 		}
@@ -66,9 +73,9 @@ function readAll(){
 //BORRRA LOS DATOS 
 
 function deleteItem(dIndex){
-	const trans = db.transaction("producto","readwrite");
-	let pdto = trans.objectStore("producto");
-	let succ = pdto.delete(dIndex);
+	const trans = db.transaction("user","readwrite");
+	let usuario = trans.objectStore("user");
+	let succ = usuario.delete(dIndex);
 	succ.onsuccess = () =>{
 		console.log("Elemento borrado");
 		cuerpo.innerHTML="";
@@ -79,19 +86,18 @@ function deleteItem(dIndex){
 
 //ACTUALIZA LOS DATOS 
 
-function updateData(uIndex, proChange, braChange, priChange,staChange){
-	const trans = db.transaction("producto","readwrite");
-	let pdto = trans.objectStore("producto");
-	const request = pdto.get(uIndex);
+function updateData(uIndex, nameChange, placeChange, emailChange,phoneChange){
+	const trans = db.transaction("user","readwrite");
+	let usuario = trans.objectStore("user");
+	const request = usuario.get(uIndex);
 	request.onsuccess = () => {
-		let pr = request.result;
-		console.log(pr);
-		pr.product = proChange;
-		pr.marca = braChange;
-		pr.precio = priChange;
-		pr.estado = staChange;
+		let usr = request.result;
+		usr.name = nameChange;
+		usr.place = placeChange;
+		usr.email = emailChange;
+		usr.phone = phoneChange;
 
-		const updateRequest = pdto.put(pr);
+		const updateRequest = usuario.put(usr);
 		updateRequest.onsuccess = () => {
 			console.log("Actualizado los datos");
 			cuerpo.innerHTML="";
